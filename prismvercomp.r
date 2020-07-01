@@ -11,6 +11,7 @@
   library(sf)
   library(ggthemes)
   #library(ggspatial)
+  library(viridis)
   
   
   prismmeans_w <- read_csv("Prism_1971-2000PrcpNormalswithone81.csv") 
@@ -74,3 +75,10 @@ ggsave("test.pdf", dpi = 300, width = 22.5, height = 13, units = "in")
 z <- ggplotly(p)
 
 htmlwidgets::saveWidget(as_widget(z), "test2.html")
+
+
+s <- inner_join(p, t)
+l <- outer_join(m, n)
+head(s)
+head(l)
+
