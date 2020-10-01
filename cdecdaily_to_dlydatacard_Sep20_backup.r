@@ -7,12 +7,12 @@ library(lubridate)
 library(gdata)
 #library(prettyR)
 
-filename <- "ktrc1_from16.csv"
+filename <- "mlpc1_fromwy18.csv"
 ## assumes:
 ## 1 no commas in cfs values - preprocess first or add comma removal line below
 ## in excel filter blanks and replace as `-901.00`
 ## - check output for NAs - data card can't have any
-com5id <- "KTRC1"
+com5id <- "MLPC1"
 
 
 nwsid <- read_csv(filename)
