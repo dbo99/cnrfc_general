@@ -377,7 +377,7 @@ p1 <- ggplot(cegc1, aes(x = wy, y = kaf, fill = period, group = wy)) +
   scale_x_continuous(breaks = seq(1950, 2020, by = 5)) +
   scale_y_continuous(sec.axis = dup_axis(name = NULL), 
                      breaks = c(seq(0,3000, by = 50), round(cegc1_thrujan15,0))) +
-  labs(x = NULL) + ggtitle(paste0("Folsom - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +  +
+  labs(x = NULL) + ggtitle(paste0("Folsom - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +  
   coord_cartesian(ylim = c(0,525))
 #ggsave("cegc1_bars.pdf", width = 21, height = 11, units = "in", dpi = 300)
 
@@ -476,7 +476,7 @@ p1 <- ggplot(ordc1, aes(x = wy, y = kaf, fill = period, group = wy)) +
   scale_y_continuous(sec.axis = dup_axis(name = NULL), 
                      
                      breaks = c(seq(0,9000, by = 250), round(ordc1_thrujan15,0))) +
-  labs(x = NULL) +  ggtitle(paste0("Folsom - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +  + 
+  labs(x = NULL) +  ggtitle(paste0("Folsom - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) + 
   coord_cartesian(ylim = c(0,2500))
 #ggsave("ordc1_bars.pdf", width = 21, height = 11, units = "in", dpi = 300)
 
@@ -572,7 +572,7 @@ p1 <- ggplot(nmsc1, aes(x = wy, y = kaf, fill = period, group = wy)) +
   scale_x_continuous(breaks = seq(1950, 2020, by = 5)) +
   scale_y_continuous(sec.axis = dup_axis(name = NULL), 
                      breaks = c(seq(0,9000, by = 50), round(nmsc1_thrujan15,0))) +
-  labs(x = NULL) +  ggtitle(paste0("Folsom - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +  +
+  labs(x = NULL) +  ggtitle(paste0("Folsom - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +
   coord_cartesian(ylim = c(0,550))
 #ggsave("nmsc1_bars.pdf", width = 21, height = 11, units = "in", dpi = 300)
 
@@ -866,7 +866,7 @@ p1 <- ggplot(exqc1, aes(x = wy, y = kaf, fill = period, group = wy)) +
   scale_x_continuous(breaks = seq(1950, 2020, by = 5)) +
   scale_y_continuous(sec.axis = dup_axis(name = NULL), 
                      breaks = c(seq(0,9000, by = 25), round(exqc1_thrujan15,0))) +
-  labs(x = NULL) + ggtitle(paste0("Folsom - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +  +
+  labs(x = NULL) + ggtitle(paste0("Folsom - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +
   coord_cartesian(ylim = c(0,375))
 #ggsave("exqc1_bars.pdf", width = 21, height = 11, units = "in", dpi = 300)
 
@@ -963,7 +963,7 @@ p1 <- ggplot(ndpc1, aes(x = wy, y = kaf, fill = period, group = wy)) +
   scale_x_continuous(breaks = seq(1950, 2020, by = 5)) +
   scale_y_continuous(sec.axis = dup_axis(name = NULL), 
                      breaks = c(seq(0,9000, by = 50), round(ndpc1_thrujan15,0))) +
-  labs(x = NULL) + ggtitle(paste0("Folsom - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +  +
+  labs(x = NULL) + ggtitle(paste0("Folsom - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +
   coord_cartesian(ylim = c(0,850))
 #ggsave("ndpc1_bars.pdf", width = 21, height = 11, units = "in", dpi = 300)
 
@@ -1061,7 +1061,7 @@ p1 <- ggplot(isac1, aes(x = wy, y = kaf, fill = period, group = wy)) +
   scale_x_continuous(breaks = seq(1950, 2020, by = 5)) +
   scale_y_continuous(sec.axis = dup_axis(name = NULL), 
                      breaks = c(seq(0,9000, by = 25), round(isac1_thrujan15,0))) +
-  labs(x = NULL) + ggtitle(paste0("Folsom - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +  + 
+  labs(x = NULL) + ggtitle(paste0("Folsom - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +   
   coord_cartesian(ylim = c(0,200))
 #ggsave("isac1_bars.pdf", width = 21, height = 11, units = "in", dpi = 300)
 
