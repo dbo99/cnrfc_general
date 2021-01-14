@@ -276,7 +276,9 @@ p1 <- ggplot(folc1, aes(x = wy, y = kaf, fill = period, group = wy)) +
   scale_y_continuous(sec.axis = dup_axis(name = NULL), 
                      breaks = c(seq(0,2000, by = 100), round(folc1_thrujan15,0))) +
   labs(x = NULL) + ggtitle(paste0("Folsom - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) + 
-  coord_cartesian(ylim = c(0,2000))
+  coord_cartesian(ylim = c(0,2000)) + 
+  geom_hline(yintercept = folc1octjan15_mean, linetype = "dotted", color = "blue", size = 0.5) +
+  geom_hline(yintercept = folc1octjan15_median, linetype = "dotdash", color = "blue", size = 0.5) 
 #ggsave("folc1_bars.pdf", width = 21, height = 11, units = "in", dpi = 300)
 
 
@@ -378,11 +380,13 @@ p1 <- ggplot(cegc1, aes(x = wy, y = kaf, fill = period, group = wy)) +
   scale_y_continuous(sec.axis = dup_axis(name = NULL), 
                      breaks = c(seq(0,3000, by = 50), round(cegc1_thrujan15,0))) +
   labs(x = NULL) + ggtitle(paste0("Trinity - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +  
-  coord_cartesian(ylim = c(0,525))
+  coord_cartesian(ylim = c(0,525))  + 
+  geom_hline(yintercept = cegc1octjan15_mean, linetype = "dotted", color = "blue", size = 0.5) +
+  geom_hline(yintercept = cegc1octjan15_median, linetype = "dotdash", color = "blue", size = 0.5)
 #ggsave("cegc1_bars.pdf", width = 21, height = 11, units = "in", dpi = 300)
 
 
-#p1
+p1
 cegc1_r <- df_107 %>% filter(reservoir == "cegc1", wy >= 2010)
 
 p2 <- ggplot(cegc1_r, aes(dowy, wy, height = cfs, group=as.factor(wy), fill = Oct1thruJan15))+
@@ -477,7 +481,10 @@ p1 <- ggplot(ordc1, aes(x = wy, y = kaf, fill = period, group = wy)) +
                      
                      breaks = c(seq(0,9000, by = 250), round(ordc1_thrujan15,0))) +
   labs(x = NULL) +  ggtitle(paste0("Oroville - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) + 
-  coord_cartesian(ylim = c(0,2500))
+  coord_cartesian(ylim = c(0,2500)) +
+  
+  geom_hline(yintercept = ordc1octjan15_mean, linetype = "dotted", color = "blue", size = 0.5) +
+  geom_hline(yintercept = ordc1octjan15_median, linetype = "dotdash", color = "blue", size = 0.5) 
 #ggsave("ordc1_bars.pdf", width = 21, height = 11, units = "in", dpi = 300)
 
 
@@ -573,7 +580,9 @@ p1 <- ggplot(nmsc1, aes(x = wy, y = kaf, fill = period, group = wy)) +
   scale_y_continuous(sec.axis = dup_axis(name = NULL), 
                      breaks = c(seq(0,9000, by = 50), round(nmsc1_thrujan15,0))) +
   labs(x = NULL) +  ggtitle(paste0("New Melones - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +
-  coord_cartesian(ylim = c(0,550))
+  coord_cartesian(ylim = c(0,550)) + 
+  geom_hline(yintercept = nmsc1octjan15_mean, linetype = "dotted", color = "blue", size = 0.5) +
+  geom_hline(yintercept = nmsc1octjan15_median, linetype = "dotdash", color = "blue", size = 0.5) 
 #ggsave("nmsc1_bars.pdf", width = 21, height = 11, units = "in", dpi = 300)
 
 
@@ -675,7 +684,9 @@ p1 <- ggplot(frac1, aes(x = wy, y = kaf, fill = period, group = wy)) +
   scale_y_continuous(sec.axis = dup_axis(name = NULL), 
                      breaks = c(seq(0,9000, by = 50), round(frac1_thrujan15,0))) +
   labs(x = NULL) + ggtitle(paste0("Millerton - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)"))  +
-  coord_cartesian(ylim = c(0,525))
+  coord_cartesian(ylim = c(0,525))  + 
+  geom_hline(yintercept = frac1octjan15_mean, linetype = "dotted", color = "blue", size = 0.5) +
+  geom_hline(yintercept = frac1octjan15_median, linetype = "dotdash", color = "blue", size = 0.5) 
 #ggsave("frac1_bars.pdf", width = 21, height = 11, units = "in", dpi = 300)
 
 
@@ -770,8 +781,10 @@ p1 <- ggplot(pftc1, aes(x = wy, y = kaf, fill = period, group = wy)) +
   scale_x_continuous(breaks = seq(1950, 2020, by = 5)) +
   scale_y_continuous(sec.axis = dup_axis(name = NULL), 
                      breaks = c(seq(0,9000, by = 50), round(pftc1_thrujan15,0))) +
-  labs(x = NULL) + ggtitle(paste0("Pine Flat - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +   +
-  coord_cartesian(ylim = c(0,575))
+  labs(x = NULL) + ggtitle(paste0("Pine Flat - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +
+  coord_cartesian(ylim = c(0,575)) + 
+  geom_hline(yintercept = pftc1octjan15_mean, linetype = "dotted", color = "blue", size = 0.5) +
+  geom_hline(yintercept = pftc1octjan15_median, linetype = "dotdash", color = "blue", size = 0.5) 
 #ggsave("pftc1_bars.pdf", width = 21, height = 11, units = "in", dpi = 300)
 
 
@@ -867,7 +880,9 @@ p1 <- ggplot(exqc1, aes(x = wy, y = kaf, fill = period, group = wy)) +
   scale_y_continuous(sec.axis = dup_axis(name = NULL), 
                      breaks = c(seq(0,9000, by = 25), round(exqc1_thrujan15,0))) +
   labs(x = NULL) + ggtitle(paste0("McClure - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +
-  coord_cartesian(ylim = c(0,375))
+  coord_cartesian(ylim = c(0,375))  + 
+  geom_hline(yintercept = exqc1octjan15_mean, linetype = "dotted", color = "blue", size = 0.5) +
+  geom_hline(yintercept = exqc1octjan15_median, linetype = "dotdash", color = "blue", size = 0.5)
 #ggsave("exqc1_bars.pdf", width = 21, height = 11, units = "in", dpi = 300)
 
 
@@ -964,7 +979,9 @@ p1 <- ggplot(ndpc1, aes(x = wy, y = kaf, fill = period, group = wy)) +
   scale_y_continuous(sec.axis = dup_axis(name = NULL), 
                      breaks = c(seq(0,9000, by = 50), round(ndpc1_thrujan15,0))) +
   labs(x = NULL) + ggtitle(paste0("New Don Pedro - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +
-  coord_cartesian(ylim = c(0,850))
+  coord_cartesian(ylim = c(0,850))  + 
+  geom_hline(yintercept = ndpc1octjan15_mean, linetype = "dotted", color = "blue", size = 0.5) +
+  geom_hline(yintercept = ndpc1octjan15_median, linetype = "dotdash", color = "blue", size = 0.5) 
 #ggsave("ndpc1_bars.pdf", width = 21, height = 11, units = "in", dpi = 300)
 
 
@@ -1062,14 +1079,16 @@ p1 <- ggplot(isac1, aes(x = wy, y = kaf, fill = period, group = wy)) +
   scale_y_continuous(sec.axis = dup_axis(name = NULL), 
                      breaks = c(seq(0,9000, by = 25), round(isac1_thrujan15,0))) +
   labs(x = NULL) + ggtitle(paste0("Isabella - ", percmean,"% mean, ", percmedian, "% median 10/1-1/15 volume (last decade)")) +   
-  coord_cartesian(ylim = c(0,200))
+  coord_cartesian(ylim = c(0,200))  + 
+  geom_hline(yintercept = isac1octjan15_mean, linetype = "dotted", color = "blue", size = 0.5) +
+  geom_hline(yintercept = isac1octjan15_median, linetype = "dotdash", color = "blue", size = 0.5) 
 #ggsave("isac1_bars.pdf", width = 21, height = 11, units = "in", dpi = 300)
 
 
 #p1
 isac1_r <- df_107 %>% filter(reservoir == "isac1", wy >= 2010)
 
-#p2 <- ggplot(isac1_r, aes(dowy, wy, height = cfs, group=as.factor(wy), fill = Oct1thruJan15))+
+p2 <- ggplot(isac1_r, aes(dowy, wy, height = cfs, group=as.factor(wy), fill = Oct1thruJan15))+
   geom_ridgeline( stat = "identity", show.legend = T, 
                   scale = 0.0007, 
                   alpha = 0.8) + #, 
